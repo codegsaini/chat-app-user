@@ -80,7 +80,7 @@ export default () => {
     const connectToChat = async () => {
         try {
             setLoading(true);
-            const socketIo = io("http://localhost:8080", {
+            const socketIo = io("https://flex-service-dot-calc-397716.el.r.appspot.com", {
                 transports: ['websocket'],
             });
             setSocket(socketIo);
@@ -104,7 +104,7 @@ export default () => {
             phone: phone,
             pageTitle: document.title
         }
-        return await axios.post("http://localhost:8080/api/v1/user/create", data);
+        return await axios.post("https://flex-service-dot-calc-397716.el.r.appspot.com/api/v1/user/create", data);
     }
 
     const onFormSubmit = (name, email, phone) => {
