@@ -28,7 +28,7 @@
 
         frame.addEventListener("load", () => widget.style.height = "450px");
 
-        const widgetUrl = "https://yellow-coyote.static.domains";
+        const widgetUrl = "https://chat-app-user-jmi80x1wr-nishant21sainis-projects.vercel.app";
         frame.src = widgetUrl;
 
         document.body.appendChild(widget);
