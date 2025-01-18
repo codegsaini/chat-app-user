@@ -28,7 +28,7 @@
 
         frame.addEventListener("load", () => widget.style.height = "450px");
 
-        const widgetUrl = "https://chat-app-user.tiiny.site";
+        const widgetUrl = "https://yellow-coyote.static.domains";
         frame.src = widgetUrl;
 
         document.body.appendChild(widget);
