@@ -28,7 +28,7 @@
 
         frame.addEventListener("load", () => widget.style.height = "450px");
 
-        const widgetUrl = "http://localhost:5174";
+        const widgetUrl = "https://chat-app-user.tiiny.site";
         frame.src = widgetUrl;
 
         document.body.appendChild(widget);
