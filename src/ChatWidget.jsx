@@ -12,6 +12,9 @@ const defaultMessage = {
 		"Hello there! Need help? Reach out to us right here, and we'll get back to you as soon as we can!",
 	createdAt: '2025-01-17T11:54:02.450Z',
 };
+
+const BASE_URL = 'https://chat-app-backend-9i97.onrender.com';
+
 const ChatWidget = () => {
 	const [socket, setSocket] = useState(null);
 	const [showChatBox, setShowChatBox] = useState(false);
@@ -74,7 +77,7 @@ const ChatWidget = () => {
 	const connectToChat = async (message) => {
 		try {
 			setLoading(true);
-			const socketIo = io('http://localhost:8080', {
+			const socketIo = io(BASE_URL, {
 				transports: ['websocket'],
 			});
 			setSocket(socketIo);
@@ -102,7 +105,7 @@ const ChatWidget = () => {
 			phone: phone,
 			pageTitle: document.title,
 		};
-		return await axios.post('http://localhost:8080/api/v1/user/create', data);
+		return await axios.post(`${BASE_URL}/api/v1/user/create`, data);
 	};
 
 	const onFormSubmit = (name, email, phone) => {
